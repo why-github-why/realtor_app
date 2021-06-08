@@ -23,15 +23,17 @@ img {
    background: url(../img/showcase.jpg) no-repeat top center fixed;
    background-size: cover;
    position: relative;
-   min-height: 650px;
+   min-height: 760px;
    color: #fff;
-   padding-top: 6rem;
+   padding-top: 10rem;
 }
+
 #showcase .home-search {
    min-height: 400px;
    position: relative;
    border-radius: 5px;
 }
+
 #showcase .overlay {
    content: "";
    position: absolute;
@@ -66,6 +68,7 @@ img {
    overflow: hidden;
    min-height: 200px;
 }
+
 #showcase-inner::before {
    content: "";
    position: absolute;
@@ -75,6 +78,7 @@ img {
    width: 100%;
    background: rgba(32, 134, 107, 0.8);
 }
+
 #showcase-inner.showcase-search {
    min-height: 270px;
 }
