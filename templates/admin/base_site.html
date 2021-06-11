@@ -1,0 +1,19 @@
+{% extends 'admin/base.html' %} {% load static %} 
+
+<!-- Logo -->
+{% block branding %}
+<h1 id="head">
+   <img
+      src="{% static 'img/logo.png' %}"
+      alt="Realtor logo"
+      height="50px"
+      width="80px"
+      class="brand_img"
+   /> Admin Area
+</h1>
+{% endblock %}
+
+<!-- CSS -->
+{% block extrastyle %}
+   <link rel="stylesheet" href="{% static 'css/admin.css' %}">
+{% endblock %}
