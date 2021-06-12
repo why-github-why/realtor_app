@@ -20,6 +20,8 @@ div.breadcrumbs {
    background-color: #30caa0;
 }
 
-
+.main.shifted > #nav-sidebar {
+   padding-top: 20px;
+}
 
 
