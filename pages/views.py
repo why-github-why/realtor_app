@@ -2,12 +2,20 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from listings.models import Listing
 from realtors.models import Realtor
+from listings.choices import *
 
 def index(request):
    # [:3] - Display only 3 listings
    listings = Listing.objects.order_by('-list_date').filter(is_published=True)[:3]
 
-   return render(request, 'pages/index.html', {'listings': listings})
+   context = {
+      'listings': listings,
+      'state_choices': state_choices,
+      'bedroom_choices': bedroom_choices,
+      'price_choices': price_choices,
+   }
+
+   return render(request, 'pages/index.html', context)
 
 def about(request):
    # Get all realtors
