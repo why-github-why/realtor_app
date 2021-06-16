@@ -56,7 +56,7 @@ def search(request):
    if 'bedrooms' in request.GET:
       bedrooms = request.GET['bedrooms']
       if bedrooms:
-         search_query = search_query.filter(bedrooms__iexact=bedrooms)  
+         search_query = search_query.filter(bedrooms__iexact=bedrooms)  # bedrooms__lte
 
    # Max Price
    if 'price' in request.GET:
@@ -70,6 +70,7 @@ def search(request):
       'bedroom_choices': bedroom_choices,
       'price_choices': price_choices,
       'listings': search_query,
+      'search_values': request.GET,  # get all values from GET request
    }
 
    return render(request, 'listings/search.html', context)

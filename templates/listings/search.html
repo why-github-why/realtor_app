@@ -18,6 +18,7 @@
                         name="keywords"
                         class="form-control"
                         placeholder="Keyword (Pool, Garage, etc)"
+                        value="{{ search_values.keywords }}"
                      />
                   </div>
 
@@ -28,6 +29,7 @@
                         name="city"
                         class="form-control"
                         placeholder="City"
+                        value="{{ search_values.city }}"
                      />
                   </div>
 
@@ -41,7 +43,7 @@
                         </option>
 
                         {% for key, value in state_choices.items %}
-                           <option value="{{ key }}">{{ value }}</option>
+                              <option value="{{ key }}" {% if key == search_values.state %} selected {% endif %}>{{ value }}</option>
                         {% endfor %}
 
                      </select>
@@ -62,7 +64,7 @@
                         </option>
                         
                         {% for key, value in bedroom_choices.items %}
-                           <option value="{{ key }}">{{ value }}</option>
+                           <option value="{{ key }}" {% if key == search_values.bedrooms %} selected {% endif %}>{{ value }}</option>
                         {% endfor %}
 
                      </select>
@@ -81,7 +83,7 @@
                         </option>
 
                         {% for key, value in price_choices.items %}
-                           <option value="{{ key }}">{{ value }}</option>
+                           <option value="{{ key }}" {% if key == search_values.price %} selected {% endif %}>{{ value }}</option>
                         {% endfor %}
 
                      </select>
