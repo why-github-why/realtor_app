@@ -6,6 +6,7 @@ from .choices import *
 def index(request):
    # pass postgresql database as object
    # sort by most recent first
+   # paginator - create pagination
    listings = Listing.objects.order_by('-list_date').filter(is_published=True)  # .all()
    paginator = Paginator(listings, 3)  # 6
    page = request.GET.get('page')
