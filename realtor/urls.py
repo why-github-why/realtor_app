@@ -23,5 +23,6 @@ urlpatterns = [
     path('listings/', include('listings.urls')),
     path('accounts/', include('accounts.urls')),
     path('contacts/', include('contacts.urls')),
+    path('blogs/', include('blogs.urls')),
     path('admin/', admin.site.urls),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)  # display media files on frontend
