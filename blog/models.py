@@ -21,7 +21,10 @@ class Post(models.Model):
    paragraph_5 = models.TextField(blank=True)
    paragraph_title_6 = models.CharField(max_length=100, blank=True)
    paragraph_6 = models.TextField(blank=True)
-   image = models.ImageField(upload_to='photos/%Y/%m/%d/', blank=True)
+   image = models.ImageField(upload_to='photos/%Y/%m/%d/')
+   image_2 = models.ImageField(upload_to='photos/%Y/%m/%d/', blank=True)
+   image_3 = models.ImageField(upload_to='photos/%Y/%m/%d/', blank=True)
+   image_4 = models.ImageField(upload_to='photos/%Y/%m/%d/', blank=True)
    subject_date = models.DateTimeField(default=datetime.now, blank=True)
 
    def __str__(self):

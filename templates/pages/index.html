@@ -13,7 +13,7 @@
             {% include 'partials/_messages.html' %}
 
             <h1 class="display-4 mb-4">
-               Property Searching Just Got Easy
+               <strong>Property Searching Made Easy</strong>
             </h1>
             <p class="lead">
                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
@@ -117,8 +117,10 @@
 
 <!-- Listings -->
 <section id="listings" class="py-5">
-   <div class="container">
-      <h1 class="text-center mb-4">Latest Listings</h1>
+   <div class="container py-5">
+      <h1 class="text-center mb-5">
+         <strong>Latest Listings</strong>
+      </h1>
       <div class="row">
 
          {% if listings %}
@@ -229,7 +231,8 @@
    </div>
 </section>
 
-<!-- Blog -->
+<!-- BLOG -->
+
 {% if posts %}
    <section id="blog" class="py-5">
       <!-- Slider -->
@@ -244,7 +247,7 @@
                   <div class="container">
                      <div class="row">
                         <div class="col-lg-5">
-                           <img src="{{ post.image.url }}" alt="">
+                           <img src="{{ post.image.url }}" alt="" class="h-100 border-radius">
                         </div>
                         <div class="col-lg-7 align-items-center">
                            <p><strong>{{ post.category }}</strong> - {{ post.subject_date }}</p>

@@ -1,9 +1,26 @@
+body {
+   font-family: 'Poppins', sans-serif !important;
+}
+
 .btn-secondary {
    color: #fff !important;
 }
 
 img {
    width: 100%;
+}
+
+.border-radius {
+   border-radius: 0.25rem !important;
+}
+
+blockquote {
+   font-family: 'IM Fell English', serif;
+   font-style: italic;
+   font-size: 1.2rem;
+   padding-left: 40px;
+   border-left: 2px solid #000;
+   margin: 2rem 0;
 }
 
 .post-link {

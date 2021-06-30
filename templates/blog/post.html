@@ -9,20 +9,94 @@
             <div class="rounded-image-md">
                <img
                   src="{{ post.author.photo.url }}"
-                  alt="Is it working?"
+                  alt=""
                />
             </div>
-            <p class="pb-3">
+            <p class="pt-1 pb-3">
                <strong>{{ post.author.name }}</strong><br />
                <span>{{ post.author.job_title }}</span>
             </p>
-            <h1>{{ post.subject }}</h1>
+            <h1><strong>{{ post.subject }}</strong></h1>
             <p>
                {{ post.introduction }}
             </p>
-            <img class="pt-2 pb-3" src="{{ post.image.url }}" alt="">
+            <img src="{{ post.image.url }}" alt="" class="mt-2 mb-3 border-radius" >
             <div class="text-left">
-               {{ post.body }}
+
+               {% if post.paragraph_title %}
+                  <h5 class="pt-3 pb-2">{{ post.paragraph_title }}</h5>
+               {% endif %}
+               
+               <p>{{ post.paragraph }}</p>
+
+               {% if post.paragraph_title_2 %}
+                  <h5 class="pt-3 pb-2">{{ post.paragraph_title_2 }}</h5>
+               {% endif %}
+
+               {% if post.paragraph_2 %}
+                  <p>{{ post.paragraph_2 }}</p>
+               {% endif %}
+
+               {% if post.paragraph_title_3 %}
+                  <h5 class="pt-3 pb-2">{{ post.paragraph_title_3 }}</h5>
+               {% endif %}
+
+               {% if post.paragraph_3 %}
+                  <p>{{ post.paragraph_3 }}</p>
+               {% endif %}
+
+               {% if post.quote %}
+                  <blockquote>
+                     <p>{{ post.quote }}</p>
+                  </blockquote>
+               {% endif %}
+
+               {% if post.paragraph_title_4 %}
+                  <h5 class="pt-3 pb-2">{{ post.paragraph_title_4 }}</h5>
+               {% endif %}
+
+               {% if post.paragraph_4 %}
+                  <p>{{ post.paragraph_4 }}</p>
+               {% endif %}
+
+               {% if post.paragraph_title_5 %}
+                  <h5 class="pt-3 pb-2">{{ post.paragraph_title_5 }}</h5>
+               {% endif %}
+
+               {% if post.paragraph_5 %}
+                  <p>{{ post.paragraph_5 }}</p>
+               {% endif %}
+
+               <div class="row py-3">
+
+                  {% if post.image_2 %}
+                     <div class="col-md-4">
+                        <img src="{{ post.image_2.url }}" alt="" class="h-100 border-radius">
+                     </div>
+                  {% endif %}
+
+                  {% if post.image_3 %}
+                     <div class="col-md-4">
+                        <img src="{{ post.image_3.url }}" alt="" class="h-100 border-radius">
+                     </div>
+                  {% endif %}
+
+                  {% if post.image_4 %}
+                     <div class="col-md-4">
+                        <img src="{{ post.image_4.url }}" alt="" class="h-100 border-radius">
+                     </div>
+                  {% endif %}
+
+               </div>
+
+               {% if post.paragraph_title_6 %}
+                  <h5 class="pt-3 pb-2">{{ post.paragraph_title_6 }}</h5>
+               {% endif %}
+
+               {% if post.paragraph_6 %}
+                  <p>{{ post.paragraph_6 }}</p>
+               {% endif %}
+
             </div>
             <hr class="my-5">
          </div>
@@ -32,18 +106,3 @@
 </section>
 
 {% endblock %}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
