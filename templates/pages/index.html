@@ -244,18 +244,25 @@
                   <div class="container">
                      <div class="row">
                         <div class="col-lg-5">
-                           <img src="" alt="">
+                           <img src="{{ post.image.url }}" alt="">
                         </div>
                         <div class="col-lg-7 align-items-center">
                            <p><strong>{{ post.category }}</strong> - {{ post.subject_date }}</p>
-                           <h1>{{ post.subject }}</h1>
+                           <a class="post-link" href="{% url 'post' post.id %}">
+                              <h1>{{ post.subject }}</h1>
+                              <p>
+                                 {{ post.introduction }}
+                              </p>
+                           </a>
+                           <div class="float-left rounded-image-sm">
+                              <img
+                                 src="{{ post.author.photo.url }}"
+                                 alt=""
+                              />
+                           </div>
                            <p>
-                              {{ post.introduction }}
-                           </p>
-                           <img class="float-left" src="" alt="">
-                           <p>
-                              <strong>{{ post.author }}</strong><br />
-                              <span>{{ post.job_title }}</span>
+                              <strong>{{ post.author.name }}</strong><br />
+                              <span>{{ post.author.job_title }}</span>
                            </p>
                         </div>
                      </div>

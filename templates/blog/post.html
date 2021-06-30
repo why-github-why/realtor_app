@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<section id="post" class="py-5">
+   <div class="container text-center">
+      <div class="row">
+         <div class="d-none d-md-block col-md-1 col-lg-2"></div>
+         <div class="col-12 col-md-10 col-lg-8">
+            <div class="rounded-image-md">
+               <img
+                  src="{{ post.author.photo.url }}"
+                  alt="Is it working?"
+               />
+            </div>
+            <p class="pb-3">
+               <strong>{{ post.author.name }}</strong><br />
+               <span>{{ post.author.job_title }}</span>
+            </p>
+            <h1>{{ post.subject }}</h1>
+            <p>
+               {{ post.introduction }}
+            </p>
+            <img class="pt-2 pb-3" src="{{ post.image.url }}" alt="">
+            <div class="text-left">
+               {{ post.body }}
+            </div>
+            <hr class="my-5">
+         </div>
+         <div class="d-none d-md-block col-md-1 col-lg-2"></div>
+      </div>
+   </div>
+</section>
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

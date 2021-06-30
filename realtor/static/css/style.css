@@ -6,6 +6,12 @@ img {
    width: 100%;
 }
 
+.post-link {
+   color: #000;
+   text-decoration: none !important;
+   cursor: pointer;
+}
+
 .rounded-image {
    height: 200px;
    width: 200px;
@@ -18,6 +24,36 @@ img {
    transform: translate(-50%);
    margin-left: 100px;
    height: 200px;
+   width: auto;
+}
+
+.rounded-image-md {
+   height: 80px;
+   width: 80px;
+   overflow: hidden;
+   border-radius: 50%;
+   margin: 0 auto;
+}
+
+.rounded-image-md img {
+   transform: translate(-50%);
+   margin-left: 40px;
+   height: 80px;
+   width: auto;
+}
+
+.rounded-image-sm {
+   height: 50px;
+   width: 50px;
+   overflow: hidden;
+   border-radius: 50%;
+   margin-right: 2.5%;
+}
+
+.rounded-image-sm img {
+   transform: translate(-50%);
+   margin-left: 25px;
+   height: 50px;
    width: auto;
 }
 
