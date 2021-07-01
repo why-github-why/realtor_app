@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
-{% block content %}
 
+{% block title %} | {{ post.subject }}{% endblock %}
+{% block content %}
 <section id="post" class="py-5">
    <div class="container text-center">
       <div class="row">
@@ -17,6 +18,7 @@
                <span>{{ post.author.job_title }}</span>
             </p>
             <h1><strong>{{ post.subject }}</strong></h1>
+            <p class="pt-1"><strong>{{ post.category }}</strong> | {{ post.subject_date|date:"M d, Y" }}</p>
             <p>
                {{ post.introduction }}
             </p>
@@ -67,22 +69,22 @@
                   <p>{{ post.paragraph_5 }}</p>
                {% endif %}
 
-               <div class="row py-3">
+               <div class="row {% if post.image_2 or post.image_3 or post.image_4 %}py-3{% endif %}">
 
                   {% if post.image_2 %}
-                     <div class="col-md-4">
+                     <div class="col-md-4 pr-0">
                         <img src="{{ post.image_2.url }}" alt="" class="h-100 border-radius">
                      </div>
                   {% endif %}
 
                   {% if post.image_3 %}
-                     <div class="col-md-4">
+                     <div class="col-md-4 pr-0">
                         <img src="{{ post.image_3.url }}" alt="" class="h-100 border-radius">
                      </div>
                   {% endif %}
 
                   {% if post.image_4 %}
-                     <div class="col-md-4">
+                     <div class="col-md-4 pr-0">
                         <img src="{{ post.image_4.url }}" alt="" class="h-100 border-radius">
                      </div>
                   {% endif %}
@@ -99,6 +101,13 @@
 
             </div>
             <hr class="my-5">
+            <div class="text-left social-icons pb-5">
+               <p><strong>Share</strong></p>
+               <a href="#" class="pr-3"><i class="fab fa-facebook-f"></i></a>
+               <a href="#" class="pr-3"><i class="fab fa-twitter"></i></a>
+               <a href="#" class="pr-3"><i class="fab fa-linkedin-in"></i></a>
+               <a href="#" class="pr-3"><i class="fab fa-pinterest"></i></a>
+            </div>
          </div>
          <div class="d-none d-md-block col-md-1 col-lg-2"></div>
       </div>
