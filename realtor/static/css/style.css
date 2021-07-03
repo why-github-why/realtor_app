@@ -14,6 +14,13 @@ img {
    border-radius: 0.25rem !important;
 }
 
+.vert-line {
+   width: 1px;
+   height: 35px;
+   margin: 0 15px;
+   background-color: #fff;
+}
+
 blockquote {
    font-family: 'IM Fell English', serif;
    font-style: italic;
@@ -27,6 +34,21 @@ blockquote {
    color: #000;
    text-decoration: none !important;
    cursor: pointer;
+}
+
+.footer-link {
+   color: #fff;
+   text-transform: uppercase;
+   text-decoration: none;
+}
+
+.footer-link:hover {
+   color: #30caa0;
+   text-decoration: none;
+}
+
+.footer-hr {
+   border-top: 5px solid #30caa0;
 }
 
 .rounded-image {
@@ -78,6 +100,10 @@ blockquote {
    width: 80px;
 }
 
+.logo-w {
+   width: 90px !important;
+}
+
 .navbar {
    opacity: 0.9;
    text-transform: uppercase;
@@ -85,6 +111,11 @@ blockquote {
 
 .social a {
    margin-right: 0.4rem;
+}
+
+.change-orient ul li {
+   display: inline-block;
+   list-style-type: none;
 }
 
 #showcase {

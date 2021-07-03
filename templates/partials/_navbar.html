@@ -16,6 +16,9 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
          <ul class="navbar-nav">
+
+            <!-- HOME -->
+
             <li 
                {% if '/' == request.path %}
                   class="nav-item active mr-3"
@@ -25,6 +28,9 @@
             ><!-- highlight active link -->
                <a class="nav-link" href="{% url 'index' %}">Home</a>
             </li>
+
+            <!-- ABOUT -->
+
             <li 
                {% if 'about' in request.path %}
                   class="nav-item active mr-3"
@@ -34,6 +40,9 @@
             >
                <a class="nav-link" href="{% url 'about' %}">About</a>
             </li>
+
+            <!-- LISTINGS -->
+
             <li 
                {% if 'listings' in request.path %}
                   class="nav-item active mr-3"
@@ -42,7 +51,21 @@
                {% endif %}
             >
                <a class="nav-link" href="{% url 'listings' %}"
-                  >Featured Listings</a
+                  >Browse Listings</a
+               >
+            </li>
+
+            <!-- BLOG -->
+
+            <li 
+               {% if 'blog' in request.path %}
+                  class="nav-item active mr-3"
+               {% else %}
+                  class="nav-item mr-3"
+               {% endif %}
+            >
+               <a class="nav-link" href="{% url 'blog' %}"
+                  >Blog</a
                >
             </li>
          </ul>

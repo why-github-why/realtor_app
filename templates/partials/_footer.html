@@ -1,6 +1,139 @@
+{% load static %}
 <!-- Footer -->
-<footer id="main-footer" class="py-4 bg-primary text-white text-center">
-   Copyright &copy;
-   <!-- dynamic date -->
-   <span class="year"></span> BT Real Estate
+<footer id="main-footer" class="pt-4 pb-5 bg-primary text-white footer-hr">
+   <div class="container">
+
+      <div class="d-flex align-items-center pt-3 pb-5">
+         <a href="{% url 'index' %}">
+            <img src="{% static 'img/logo.png' %}" class="logo" alt="" />
+         </a>
+         <i class="vert-line"></i>
+         <h5 class="pl-2">Property Searching Made Easy</h5>
+      </div>
+
+      <div class="row pt-2 pb-5">
+
+         <!-- LINKS -->
+
+         <div class="col-12 col-md-4">
+            <ul class="pl-0" style="list-style: none;">
+               <li class="pb-1">
+                  <h5>
+                     <a href="{% url 'index' %}" class="footer-link">
+                        Home
+                     </a>
+                  </h5>
+               </li>
+               <li class="pb-1">
+                  <h5>
+                     <a href="{% url 'about' %}" class="footer-link">
+                        About Us
+                     </a>
+                  </h5>
+               </li>
+               <li class="pb-1">
+                  <h5>
+                     <a href="{% url 'listings' %}" class="footer-link">
+                        Featured Listings
+                     </a>
+                  </h5>
+               </li>
+               <li class="pb-1">
+                  <h5>
+                     <a href="{% url 'blog' %}" class="footer-link">
+                        Tips & Advice
+                     </a>
+                  </h5>
+               </li>
+            </ul>
+         </div>
+
+         <!-- CONTACT --> 
+
+         <div class="col-12 col-md-4">
+            <h5>
+               <a href="mailto:hello@leonkleinhans.com" class="footer-link">Contact</a>
+            </h5>
+            <p>
+               BT Real Estate<br />
+               Corporate Office<br />
+               3000 Lava Ridge Court<br />
+               Suite 200<br />
+               Roseville, CA 95661<br />
+               916.960.1325
+            </p>
+         </div>
+
+         <!-- SOCIAL -->
+
+         <div class="col-12 col-md-4">
+            <div class="d-none d-md-block"><!-- hidden up to md -->
+               <!-- <h5>SHARE</h5> -->
+               <ul class="pl-0" style="list-style: none;">
+                  <li class="pb-1">
+                     <h5>
+                        <a href="#" class="pr-3 footer-link"><i class="fab fa-facebook-f"></i></a>
+                     </h5>
+                  </li>
+                  <li class="pb-1">
+                     <h5>
+                        <a href="#" class="pr-3 footer-link"><i class="fab fa-twitter"></i></a>
+                     </h5>
+                  </li>
+                  <li class="pb-1">
+                     <h5>
+                        <a href="#" class="pr-3 footer-link"><i class="fab fa-linkedin-in"></i></a>
+                     </h5>
+                  </li>
+                  <li class="pb-1">
+                     <h5>
+                        <a href="#" class="pr-3 footer-link"><i class="fab fa-instagram"></i></a>
+                     </h5>
+                  </li>
+               </ul>
+            </div>
+            <div class="d-block d-md-none change-orient"><!-- visible up to md -->
+               <ul class="pl-0">
+                  <li class="pb-1">
+                     <h5>
+                        <a href="#" class="pr-3 footer-link"><i class="fab fa-facebook-f"></i></a>
+                     </h5>
+                  </li>
+                  <li class="pb-1">
+                     <h5>
+                        <a href="#" class="pr-3 footer-link"><i class="fab fa-twitter"></i></a>
+                     </h5>
+                  </li>
+                  <li class="pb-1">
+                     <h5>
+                        <a href="#" class="pr-3 footer-link"><i class="fab fa-linkedin-in"></i></a>
+                     </h5>
+                  </li>
+                  <li class="pb-1">
+                     <h5>
+                        <a href="#" class="pr-3 footer-link"><i class="fab fa-instagram"></i></a>
+                     </h5>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </div>
+
+      <div class="text-left">
+         <p>
+            All information contained herein is for informational purposes only and, while every effort has been made to ensure accuracy, no guarantee is expressed or implied. Any programs shown do not demonstrate all options or pricing structures. Rates, terms, programs and underwriting policies subject to change without notice. This is not an offer to extend credit or a commitment to lend. All loans subject to underwriting approval. Some products may not be available in all states and restrictions apply. PURSUANT TO THE REQUIREMENTS OF SECTION 157.007 OF THE MORTGAGE BANKER REGISTRATION AND RESIDENTIAL MORTGAGE LOAN ORIGINATOR ACT, CHAPTER 157, TEXAS FINANCE CODE, YOU ARE HEREBY NOTIFIED OF THE FOLLOWING: CONSUMERS WISHING TO FILE A COMPLAINT AGAINST A MORTGAGE BANKER OR A LICENSED MORTGAGE BANKER RESIDENTIAL MORTGAGE LOAN ORIGINATOR SHOULD COMPLETE, SIGN AND SEND A COMPLAINT FORM TO THE TEXAS DEPARTMENT OF SAVINGS AND MORTGAGE LENDING, 2601 NORTH LAMAR, SUITE 201, AUSTIN, TEXAS 78705. COMPLAINT FORMS AND INSTRUCTIONS MAY BE DOWNLOADED AND PRINTED FROM THE DEPARTMENT’S WEBSITE AT WWW.SML.TEXAS.GOV. A TOLL-FREE CONSUMER HOTLINE IS AVAILABLE AT 1-877-276-5550. THE DEPARTMENT MAINTAINS A RECOVERY FUND TO MAKE PAYMENTS OF CERTAIN ACTUAL OUT OF POCKET DAMAGES SUSTAINED BY BORROWERS CAUSED BY ACTS OF LICENSED MORTGAGE BANKER RESIDENTIAL MORTGAGE LOAN ORIGINATORS. A WRITTEN APPLICATION FOR REIMBURSEMENT FROM THE RECOVERY FUND MUST BE FILED WITH AND INVESTIGATED BY THE DEPARTMENT PRIOR TO THE PAYMENT OF A CLAIM. FOR MORE INFORMATION ABOUT THE RECOVERY FUND, PLEASE CONSULT THE DEPARTMENTS WEB SITE AT WWW.SML.TEXAS.GOV.
+         </p>
+         <p>
+            Copyright &copy;
+            <!-- dynamic date -->
+            <span class="year"></span>. BT Real Estate
+         </p>
+         <img src="{% static 'img/realtor-logo.png' %}" class="realtor-logo logo-w pb-3" alt="" />
+      </div>
+   </div>
 </footer>
+
+<!-- <footer id="main-footer" class="py-4 bg-primary text-white text-center">
+   Copyright &copy;
+   <span class="year"></span> BT Real Estate
+</footer> -->
