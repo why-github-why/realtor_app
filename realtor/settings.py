@@ -158,3 +158,9 @@ EMAIL_PORT = 587
 EMAIL_HOST_USER = 'smtplib2@gmail.com'
 EMAIL_HOST_PASSWORD = 'smtpL182#!'
 EMAIL_USE_TLS = True
+
+# PRODUCTION SERVER ONLY
+try:
+    from .local_settings import *
+except ImportError:
+    pass
