@@ -21,7 +21,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-o6(%(=15z!@jsx4nmjjo6izg49iy3lffifg!$q1-uy9#l-*nau'
+SECRET_KEY = '***'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -84,9 +84,9 @@ WSGI_APPLICATION = 'realtor.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'realtordb',  # 'NAME': BASE_DIR / 'db.sqlite3',
-        'USER': 'postgres',
-        'PASSWORD': 'p05tgr35',
+        'NAME': '***',
+        'USER': '***',
+        'PASSWORD': '***',
         'HOST': 'localhost',
         'PORT': '5432',
     }
@@ -155,8 +155,8 @@ MESSAGE_TAGS = {
 # EMAIL CONFIGURATION
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'smtplib2@gmail.com'
-EMAIL_HOST_PASSWORD = 'smtpL182#!'
+EMAIL_HOST_USER = '***'
+EMAIL_HOST_PASSWORD = '***'
 EMAIL_USE_TLS = True
 
 # PRODUCTION SERVER ONLY
